@@ -1,0 +1,195 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #202123, #343541);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+/* Chat Container */
+.chat-container {
+    width: 100%;
+    max-width: 800px;
+    height: 90vh;
+    background: #444654;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Header */
+.chat-header {
+    background: linear-gradient(135deg, #202123, #343541);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #555;
+}
+
+.chat-header .logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    border-radius: 50%; /* Circular logo */
+}
+
+.chat-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Chat Window */
+.chat-window {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #343541;
+}
+
+/* Message Bubbles */
+.message {
+    margin-bottom: 15px;
+    padding: 12px 18px;
+    border-radius: 15px;
+    max-width: 70%;
+    word-wrap: break-word;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* User Message (Right Side) */
+.user-message {
+    background: #00A884;  /* WhatsApp-style green */
+    color: white;
+    align-self: flex-end;  /* Pushes message to the right */
+    margin-left: auto;  /* Ensures it's aligned right */
+    padding: 12px 18px;
+    max-width: 60%;
+    width: fit-content;
+    border-radius: 15px;
+    word-wrap: break-word;
+    display: block; /* Ensures it appears as a block */
+    margin-bottom: 5px; /* Adds spacing for next message */
+    text-align: left; /* Align text to the left */
+}
+
+/* Bot Message (Left Side) */
+.bot-message {
+    background: #444654;
+    color: white;
+    align-self: flex-start;  /* Pushes message to the left */
+    margin-right: auto;  /* Ensures it's aligned left */
+    padding: 12px 18px;
+    max-width: 60%;
+    width: fit-content;
+    border-radius: 15px;
+    word-wrap: break-word;
+    display: block; /* Ensures it appears as a block */
+    margin-top: 5px; /* Space between user & bot message */
+    text-align: left; /* Align text to the left */
+}
+
+/* Input Area */
+.chat-input {
+    display: flex;
+    padding: 15px;
+    background: linear-gradient(135deg, #202123, #343541);
+    border-top: 1px solid #555;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 10px;
+    background: #444654;
+    color: #fff;
+    margin-right: 10px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.chat-input input::placeholder {
+    color: #888;
+}
+
+.chat-input button {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #10A37F, #0D8A6D);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.chat-input button:hover {
+    background: linear-gradient(135deg, #0D8A6D, #10A37F);
+}
+/* Welcome Message Style */
+/* Welcome Message Style */
+.welcome-message {
+    background: transparent; /* No background for the welcome message */
+    color: #fff; /* White text */
+    font-size: 1.5rem; /* Larger font size */
+    text-align: center; /* Center the text */
+    margin: auto; /* Center the message in the chat window */
+    padding: 20px;
+    position: absolute; /* Position it in the center */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Perfect centering */
+    opacity: 0.8; /* Slightly transparent */
+    font-style: italic; /* Italic text for a friendly tone */
+}
+/* Related Questions */
+/* Related Questions Container */
+.related-questions {
+    
+    position: relative; /* Position inside the container */
+    background: #444654; /* Match chatbot theme */
+    border-radius: 8px;
+    padding: 10px;
+    max-height: 150px; /* Limit height */
+    overflow-y: auto; /* Enable scrolling if needed */
+    display: none; /* Hidden by default */
+    margin-bottom: 10px; /* Space between suggestions and input box */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+    
+}
+
+/* Individual Question Styling */
+.related-questions .question {
+    padding: 8px 12px;
+    margin: 5px 0;
+    background: #343541; /* Darker background for questions */
+    color: #fff; /* White text */
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s ease; /* Smooth hover effect */
+}
+
+.related-questions .question:hover {
+    background: #555; /* Highlight on hover */
+}
